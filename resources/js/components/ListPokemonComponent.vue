@@ -6,6 +6,7 @@
                 type="text"
                 class="form-control"
                 id="filter-text-box"
+                name="filter-text-box"
                 placeholder="Buscar..."
                 v-on:input="onFilterTextBoxChanged()" 
             />
