@@ -1,3 +1,3 @@
 web: vendor/bin/heroku-php-apache2 public/
-heroku buildpacks:add heroku/nodejs
-heroku config:set NPM_CONFIG_PRODUCTION=false
+web: heroku buildpacks:add heroku/nodejs
+web: heroku config:set NPM_CONFIG_PRODUCTION=false
