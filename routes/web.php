@@ -18,12 +18,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\PokemonController::class, 'index'])->name('home');
 
 
 Route::group(['prefix' => 'pokemons', 'middleware' => 'auth'], function () {
-    Route::get('/list', [App\Http\Controllers\HomeController::class, 'list_pokemons'])->name('pokemons.list');
-    Route::get('/details/{name?}', [App\Http\Controllers\HomeController::class, 'details_pokemons'])->name('pokemons.details');
+    Route::get('/get/{name?}', [App\Http\Controllers\PokemonController::class, 'get_pokemon'])->name('pokemons.get');
+    Route::get('/list', [App\Http\Controllers\PokemonController::class, 'list_pokemons'])->name('pokemons.list');
+    Route::get('/details/{name?}', [App\Http\Controllers\PokemonController::class, 'details_pokemons'])->name('pokemons.details');
+    Route::post('/favorites', [App\Http\Controllers\PokemonController::class, 'favorites_pokemons'])->name('pokemons.favorites');
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {

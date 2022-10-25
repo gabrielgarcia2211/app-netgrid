@@ -43,11 +43,11 @@ class UserController extends Controller
 
             $user_edit->save();
 
-            # respuesta de la solicitud de        
+            # respuesta de la solicitud     
             Alert::success('Exito', 'Informacion actualizada');
             return redirect()->back();
         } catch (\Exception $e) {
-            Log::error("UserController/edit_user - No se puedo actualizar el usuario" . Auth::user()->name . ' ' . $e->getMessage());
+            Log::error("UserController/edit_user - No se pudo actualizar el usuario" . Auth::user()->name . ' ' . $e->getMessage());
         }
     }
 }
