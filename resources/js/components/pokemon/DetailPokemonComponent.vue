@@ -5,7 +5,7 @@
 </style>
 
 <template>
-    <div class="container" style="width: 100%; padding: 20px">
+    <div class="container" style="width: 100%; padding: 20px;max-height: 500px; overflow-y: scroll;">
         <div class="card border-0">
             <h2 class="card-title">
                 {{ this.pokemonDetail.name }}
