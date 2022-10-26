@@ -1,4 +1,4 @@
-# NETGRID/API
+# STRADATA - APIREST
 
 [![N|Solid](https://laravelvuespa.com/preview.png)](https://laravel.com)
 Esta aplicacion fue realizada en Laravel como framework de Backend con persistencia de datos en MySQL/MariaDB y Frontend Vue.js
@@ -33,6 +33,7 @@ Esta aplicacion fue realizada en Laravel como framework de Backend con persisten
 ## NOTA
 
 `PHP VERSION, DEBE SER >= 7.4 PARA EVITAR INCOMPATIBILIDAD CON COMPOSER`
+`PARA TRABAJAR LAS SIGUIENTES RUTAS SE RECOMIENDA POSTMAN`
 
 
 
@@ -85,8 +86,9 @@ Esta aplicacion fue realizada en Laravel como framework de Backend con persisten
 - [@gabrielgarcia2211](https://github.com/gabrielgarcia2211)
 
 ## Despliegue
-## `NOTA`
-* SE RECOMIENDA UTILIZAR EL NAVEGADOR [EDGE](https://www.microsoft.com/es-es/edge?form=MA13FJ)  PARA ABRIR EL SITIO`
+`NOTA`
+SE RECOMIENDA UTILIZAR EL NAVEGADOR [EDGE](https://www.microsoft.com/es-es/edge?form=MA13FJ)  PARA ABRIR EL SITIO
+
 [![debug](https://img.icons8.com/color/0/heroku.png)](http://web-netgrid.herokuapp.com/)
 
 ## Contribuyentes
