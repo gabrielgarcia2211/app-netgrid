@@ -1,4 +1,4 @@
-# NETGRID
+# NETGRID/API
 
 [![N|Solid](https://laravelvuespa.com/preview.png)](https://laravel.com)
 Esta aplicacion fue realizada en Laravel como framework de Backend con persistencia de datos en MySQL/MariaDB y Frontend Vue.js
