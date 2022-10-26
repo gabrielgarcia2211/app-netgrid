@@ -33,7 +33,6 @@ Esta aplicacion fue realizada en Laravel como framework de Backend con persisten
 ## NOTA
 
 `PHP VERSION, DEBE SER >= 7.4 PARA EVITAR INCOMPATIBILIDAD CON COMPOSER`
-`PARA TRABAJAR LAS SIGUIENTES RUTAS SE RECOMIENDA POSTMAN`
 
 
 
