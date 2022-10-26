@@ -1,4 +1,7 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# STRADATA - APIREST
+
+[![N|Solid](https://laravelvuespa.com/preview.png)](https://laravel.com)
+Esta aplicacion fue realizada en Laravel como framework de Backend con persistencia de datos en MySQL/MariaDB y Frontend Vue.js
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -7,58 +10,90 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Caracteristicas
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Registro de usuarios.
+- Edicion de usuario luego del registro previo.
+- Login de usuarios con correo electrónico.
+- Lista de personajes del API seleccionada(pokemons).
+- Visualizacion de la información de un personaje seleccionado.
+- Registro de personajes como favoritos.
+- Opcional: Prueba funcional con Laravel/Vuejs - (ingreso, y seleccion de pokemon).
 
-## Learning Laravel
+## Tecnologias
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* [Laravel + Vue.js](https://bluuweb.github.io/tutorial-laravel/vue/) Laravel es un framework de código abierto para desarrollar aplicaciones y servicios web con PHP 5 y PHP 7. Su filosofía es desarrollar código PHP de forma elegante y simple, evitando el "código espagueti". Fue creado en 2011 y tiene una gran influencia de frameworks como Ruby on Rails, Sinatra y ASP. NET MVC. Junto con Vue.js que es Framework Frontend qe le brinda sencillez y facilidad al desarrollador al momento de implementar la tecnologia.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* [MySQL](https://dev.mysql.com/downloads/mysql/) MySQL es el sistema de gestión de bases de datos relacional más extendido en la actualidad al estar basada en código abierto. Desarrollado originalmente por MySQL AB, fue adquirida por Sun MicroSystems en 2008 y esta su vez comprada por Oracle Corporation en 2010, la cual ya era dueña de un motor propio InnoDB para MySQL.
 
-## Laravel Sponsors
+* [Laragon](https://laragon.org/download/index.html) Es una herramienta bastante robusta que trae consigo aplicaciones utiles para el desarrollo del aplicativo, por ejemplo, Apache 2.4, Nginx, MySQL 5.7, PHP 7.4, Redis, Memcached Node.js 14, npm, git.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## NOTA
 
-### Premium Partners
+`PHP VERSION, DEBE SER >= 7.4 PARA EVITAR INCOMPATIBILIDAD CON COMPOSER`
+`PARA TRABAJAR LAS SIGUIENTES RUTAS SE RECOMIENDA POSTMAN`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Instalación (Uso local)
+- Primero se debe instalar [Laragon](https://laragon.org/download/index.html) en la maquina, para nuestro servidor apache local.
 
-## Code of Conduct
+- Clonar proyecto
+    ```bash
+    git clone https://github.com/gabrielgarcia2211/netgrid app-netgrid
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Despues se debe ir al directorio del proyecto
+    ```bash
+    cd my-project
+    ```
 
-## Security Vulnerabilities
+- Luego se **Instala/Actualiza** las dependencias composer en la terminal del proyecto, con el siguiente comando:
+    ```sh
+    composer install
+    ```
+    
+- Luego se debemos duplicar el archivo **.env.example** cambiamos el nombre a **.env**, y debemos configurar lo siguiente:
+    ```sh
+    DB_DATABASE = name_database
+    ```
+    ```javascript
+    $ php artisan key:generate
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Luego se **Instala/Actualiza** las dependencias npm Vue.js a traves del siguiente comando(FRONTEND):
+   ```sh
+    npm install
+    ```
+- Se compilanlos componentes y librerias de npm (FRONTEND):
+    ```sh
+    npm run watch / npm run dev
+    ```
+- Se corre el proyecto a traves del siguiente comando(BACKEND):
+    ```sh
+    php artisan serve
+    ```
+- Se debe verificar la implementación navegando a la dirección de su servidor en su navegador preferido.
+    ```sh
+    http://127.0.0.1:8080/
+    ```
+    
+    
+## Autores
 
-## License
+- [@gabrielgarcia2211](https://github.com/gabrielgarcia2211)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Despliegue
+## `NOTA`
+* SE RECOMIENDA UTILIZAR EL NAVEGADOR [EDGE](https://www.microsoft.com/es-es/edge?form=MA13FJ)  PARA ABRIR EL SITIO`
+[![debug](https://img.icons8.com/color/0/heroku.png)](http://web-netgrid.herokuapp.com/)
+
+## Contribuyentes
+*¡Las contribuciones son siempre bienvenidas!*
+
+## Licencia
+[MIT](https://choosealicense.com/licenses/mit/)
+
+

@@ -11,7 +11,6 @@ class MediosTest extends DuskTestCase
 
     private $email = "garciaquinteroga@gmail.com";
     private $password = "123456789";
-    private $site = "http://127.0.0.1:8000/";
 
     /**
      * A Dusk test example.
@@ -20,15 +19,16 @@ class MediosTest extends DuskTestCase
      */
     public function testExample()
     {
-        self::set_favorite();
+        $site = env('APP_URL');
+        self::set_favorite($site);
     }
 
-    private function set_favorite()
+    private function set_favorite($site)
     {
         try {
-            $this->browse(function (Browser $browser) {
+            $this->browse(function (Browser $browser) use ($site) {
 
-                $browser->visit($this->site)
+                $browser->visit($site . "login")
                     ->waitForText('NETGRID')
                     ->type('email', $this->email)
                     ->type('password', $this->password)
