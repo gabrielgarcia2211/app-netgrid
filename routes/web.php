@@ -30,4 +30,5 @@ Route::group(['prefix' => 'pokemons', 'middleware' => 'auth'], function () {
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     Route::post('/edit', [App\Http\Controllers\UserController::class, 'edit_user'])->name('user.edit');
+    Route::get('/pdf/favorites', [App\Http\Controllers\UserController::class, 'pdf_favorites'])->name('user.favorites');
 });
