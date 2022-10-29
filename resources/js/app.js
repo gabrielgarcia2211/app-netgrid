@@ -38,7 +38,6 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 Vue.use(vmodal);
 Vue.use(VueSweetalert2);
 
-
 Vue.mixin(shared.AlertsComponent);
 Vue.mixin(shared.ReadHttpStatusErrors);
 

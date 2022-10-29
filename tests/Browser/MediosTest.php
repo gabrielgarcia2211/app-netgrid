@@ -10,7 +10,7 @@ class MediosTest extends DuskTestCase
 {
 
     private $email = "garciaquinteroga@gmail.com";
-    private $password = "123456789";
+    private $password = "123456789A";
 
     /**
      * A Dusk test example.
@@ -36,7 +36,7 @@ class MediosTest extends DuskTestCase
 
                 $browser->pause(3000);
 
-                $num = rand(1, 1000);
+                $num = rand(1, 100);
 
                 #carga de datos
                 $browser->type('filter-text-box', "$num");

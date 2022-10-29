@@ -1,16 +1,30 @@
 <template>
     <div class="container">
-      
-        <div class="input-group mb-3" style="width: 20%">
-            <input
-                type="text"
-                class="form-control"
-                id="filter-text-box"
-                name="filter-text-box"
-                placeholder="Buscar..."
-                v-on:input="onFilterTextBoxChanged()" 
-            />
+        <div class="d-flex">
+            <div class="input-group mb-3" style="width: 20%">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="filter-text-box"
+                    name="filter-text-box"
+                    placeholder="Buscar..."
+                    v-on:input="onFilterTextBoxChanged()"
+                />
+            </div>
+            <div class="input-group mb-3" style="width: 30%; margin-left: 20px">
+                <a
+                    type="button"
+                    class="btn btn-danger"
+                    title="Pdf favoritos"
+                    href="/user/pdf/favorites"
+                    target="_blank"
+                >
+                    Reporte
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
+
         <ag-grid-vue
             style="width: 100%; height: 400px; padding: 5px"
             class="ag-theme-alpine"
